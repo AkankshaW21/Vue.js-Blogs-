@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Introduction to Vue.js</title>
+    <style>
+           
+ 
+        header {
+            background-color: #35495e;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+        .container {
+            background-color: #dfd9d9; /* Set the desired background color for the margin */
+           margin-left: 70px;
+           margin-right: 50px;
+            padding: 20px; /* Set the desired padding for content within the container */
+        }
+       /*.box-img {
+            width: 50%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            
+       }*/
+       .box-img {
+            width: 50%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+           animation-name:colorAnimate;
+            animation-duration: 4s;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+      }
+       @keyframes colorAnimate{
+         form{ left: 0px;}
+         to{ left:200px;}
+       }
+        a {
+            color: white;
+            text-decoration: none;
+            margin-right: 70px ;
+        }
+        
+  .hero-section {
+   /*background-image: url("front_pic.jpg");
+   height: 600px;
+   background-size: cover;
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;*/
+  }
+.hero-msg {
+    background-color: white;
+    color:black;
+    height: 40px;
+    display: flex;
+   /* align-items: center;*/
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 0.85rem;
+    width:80%;
+    margin: bottom 25px;;
+}
+.hero-msg a {
+    color: #007185;
+}
+        
+        
+       .box-image1 {
+    height: 400px;
+    width: 500px;
+    background-size:cover;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.box-image2 {
+    height: 200px;
+    width: 800px;
+    background-size:cover;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+    .box-content {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.box-image3 {
+    height: 400px;
+    width: 500px;
+    background-size:cover;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.box-image4 {
+    height: 200px;
+    width: 800px;
+    background-size:cover;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.box1 box{
+    height: 400px;
+    width: 500px;
+}
+.box3 box{
+    height: 400px;
+    width: 500px;
+}
+.box2 box{
+    height: 200px;
+    width: 800px;
+}
+.box2 box{
+    height: 200px;
+    width: 800px;
+}     
+      
+      body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+          }
+          
+          #navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            background-color: #0f1111;
+            color: #dfd3d3;
+            padding: 0 20px;
+          }
+          
+          #logo {
+            text-decoration: none;
+            font-size: 24px;
+            color: #dfd3d3;
+          }
+          
+          #navbar a {
+            text-decoration: none;
+            color: #dfd3d3;
+            margin: 0 10px;
+            font-size: 18px;
+          }  
+               
+              
+       .page-container {
+          margin-top: 2px;
+                  position: relative;
+                  width: 100%;
+                  height: 500px; /* Set the desired height for the blurred background */
+                  overflow: hidden;
+                  margin-left:30px;
+              }
+      
+              .blur-background {
+                  background-image: url('https://github.com/AkankshaW21/Vue.js-Blogs/blob/main/pasted%20image%200%20(1).jpg?raw=true');
+                  height: 1200px;
+                  width: 1500px;
+                  filter: blur(70px); /* Adjust the blur intensity as needed */
+                  position: absolute;
+                  z-index: -1;
+              }
+      
+      
+              .overlay-image {
+                  position: absolute;
+                  margin-top: 243px;
+                  left: 41%; /* Adjust the left position to your desired spacing */
+                  transform: translate(-50%, -50%);
+                  width: 800px; /* Set the desired width for the overlay image */
+                  height: 475px; /* Set the desired height for the overlay image */
+                  margin-left: 400px;
+                 
+              }
+              .overlay-heading {
+                  position: absolute;
+                  top: 50%;
+                  left: 21%;
+                  transform: translate(-50%, -50%);
+                 color:white;
+                  padding: 10px 20px; /* Adjust padding as needed */
+                  font-size: 44px; /* Set the desired font size */
+              }
+      
+      
+              
+              .author-bio {
+                  margin-top: 30px;
+                  padding: 20px;
+                  background-color: #f8f8f8;
+                  border: 1px solid #ddd;
+                  border-radius: 5px;
+                  text-align: center;
+              }
+      
+              .author-avatar {
+                  width: 80px;
+                  height: 80px;
+                  border-radius: 50%;
+                  object-fit: cover;
+                  margin-bottom: 10px;
+              }
+      
+              .author-name {
+                  font-size: 1.2rem;
+                  margin-bottom: 5px;
+              }
+      
+              .author-description {
+                  font-size: 0.9rem;
+                  color: #666;
+              }
+      
+          
+       
+      
+      .separate-container {
+                  background-color: #607389;
+                  color: white;
+                  text-align: center;
+                  padding: 20px 0;
+              }
+      
+              .separate-container h3 {
+                  font-size: 2rem;
+                  margin-bottom: 20px;
+              }
+      
+              /* Style for social media icons within separate container */
+              /* Style for the social media icons within separate container */
+      /* Style for the social media icons within separate container */
+      /* Style for the social media icons within separate container */
+      .social-icons-container .social-icon-link {
+          font-size: 24px; /* Adjust the font size as needed */
+          margin-right: 10px; /* Add margin between the icons */
+          text-decoration: none; /* Remove underlines from the links */
+          color: #3b5998; /* Facebook blue color */
+      }
+      
+      .social-icons-container .social-icon-link.facebook:hover {
+          color: #4267B2; /* Facebook hover color */
+      }
+      
+      .social-icons-container .social-icon-link.twitter {
+          color: #1DA1F2; /* Twitter blue color */
+      }
+      
+      .social-icons-container .social-icon-link.twitter:hover {
+          color: #2795D9; /* Twitter hover color */
+      }
+      
+      .social-icons-container .social-icon-link.instagram {
+          color: #E4405F; /* Instagram pink/red color */
+      }
+      
+      .social-icons-container .social-icon-link.instagram:hover {
+          color: #C13584; /* Instagram hover color */
+      }
+      
+      .social-icons-container .social-icon-link.linkedin {
+          color: #0A66C2; /* LinkedIn blue color */
+      }
+      
+      .social-icons-container .social-icon-link.linkedin:hover {
+          color: #0073B2; /* LinkedIn hover color */
+      }
+      
+      .social-icons-container .social-icon-link.youtube {
+          color: #FF0000; /* YouTube red color */
+      }
+      
+      .social-icons-container .social-icon-link.youtube:hover {
+          color: #FF3333; /* YouTube hover color */
+      }
+
+        
+
+.footer {
+    margin-top:15px;
+    
+
+}
+
+.foot-panel1 {
+    background-color: #37475a;
+    color: white;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-size: 0.85rem;
+}
+ .foot-panel2  {
+    background-color: #222f3d;
+    color: white;
+    height: 350px;
+    display: flex;
+    justify-content: space-evenly;
+ } 
+ ul {
+     margin-top: 20px ;
+ }
+ 
+  
+ ul a {
+     display:block;
+     font-size:18px;
+     margin-top: 10px;
+     color:#dddddd:
+  }
+ 
+  .foot-panel3 {
+         background-color: #222f3d;
+         color: white;
+         border-top:0.5px solid white;
+         height:70px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         
+  }
+
+  .separate-container {
+            background-color: #607389;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .separate-container h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <a id="logo" href="#">vue.js</a>
+        <a href="blog1.html">Home</a>
+        <a href="about us.html">About </a>
+        <a href="features4.html">features</a>
+        <a href="references2.html">references</a>
+        <a href="Contact Us.html">Contact Us</a>
+    </div>
+    <div class="hero-section">
+            
+        <div class="page-container">
+            <img src="https://github.com/AkankshaW21/Vue.js-Blogs/blob/main/pasted%20image%200%20(1).jpg?raw=true" alt="Overlay Image" class="overlay-image">
+            <img src="https://github.com/AkankshaW21/Vue.js-Blogs/blob/main/pasted%20image%200%20(1).jpg?raw=true" alt="Overlay Image" class="blur-background">
+
+            <div class="overlay-heading">Exploring the Power of Vue.js</div>
+        </div>
+
+        <div class="container">
+       <p><h1><center>Exploring the Power of Vue.js</center></h1></p>
+        <p>Vue is a JavaScript framework for building user interfaces. It builds on top of standard HTML, CSS, and JavaScript and it helps you  efficiently develop user interfaces by providing a declarative and component-based programming model.
+            " Did you know that over 2 million websites are currently using Vue.js to enhance their user interfaces and streamline development workflows?"This rapidly growing adoption speaks volumes about the impact Vue.js is having on the web development landscape.
+            </p>
+        <h2>History of Vue.js </h2>
+        <p>Evan You developed Vue ,he was working for google using AngularJS in several projects.<br>Vue was first publicly announced in the February, 2014. 
+        </p>
+        <h2>Why to Choose Vue.js?</h2>
+        <ul>
+            <li>Ease of Learning: Making it accessible to developers of all skill levels, Vue.js has a gentle learning curve. It closely resembles HTML and JavaScript and its syntax is intuitive.</li>
+            <li>Versatility: Vue.js can be used to build single-page applications (SPAs).It is a web application that provides users a very fluid, reactive, and fast experience similar to a desktop application.It can also build complex frontend components for larger projects.</li>
+            <li>Reactivity:Vue.js introduces a reactive data binding system that enables real-time updates to the user interface whenever data changes.</li>
+            <li>Component-Based Architecture: Vue.js promotes a modular approach to development by using components, which can be reused throughout your application for a consistent design and functionality.
+            </li>
+        </ul>
+        <div>
+            <img class="box-img" src="https://012.vuejs.org/images/mvvm.png">            
+        </div>
+        <h2>Starting with Vue.js</h2>
+        <ol>
+            <li>Installation: To get started, include Vue.js in your project using a CDN or by installing it via npm.<a href="https://cli.vuejs.org/guide/installation.html" style="color: blue;">Click here for more information</a>  </li>
+            <li>Creating a Vue Instance: The Vue instance is core of every Vue.js application.To create one use the new Vue() constructor  and define the el property to specify the HTML element the instance will manage.</li>  
+             <li>Data Binding: Using the double curly brace syntax ({{ data }}),Vue.js's reactivity system allows you to bind data to the DOM. </li>
+            <li>Directives: Directives provide additional functionality to HTML elements and are special attributes with the v- prefix.For example,commonly used directives are v-if, v-for, and v-bind.</li>
+            <li>Components:Using the Vue.component() method, break down your application into reusable components. This promotes code organization and maintainability.</li>
+            <li>User Input Handling: To handle user interactions such as button clicks, form submissions, and more use the 'v-on' directive.  </li>  
+            <li>Computed Properties: Computed properties allow you to perform calculations on the fly based on reactive data and use the results in your templates.</li>
+            <li>Lifecycle Hooks: Vue.js offers a series of lifecycle hooks that allow you to execute code at specific stages of a component's lifecycle.
+            </li>
+        </ol>
+        <p>Let's see an example
+          <br>  Here development verison of vuejs is used.</p>
+          <div class="box1 box">
+            <div class="box-content">
+          <div class="box-image1" style="background-image: url('https://github.com/AkankshaW21/Vue.js-Blogs/blob/main/e1.html.jpg?raw=true ');"></div>
+        </div></div>
+          <p>Output of above code will be:</p>
+          <div class="box2 box">
+            <div class="box-content">
+          <div class="box-image2" style="background-image: url('https://github.com/AkankshaW21/Vue.js-Blogs/blob/main/e2.html.jpg?raw=true ');"></div>
+        </div></div>
+          <p>For more details <a href="https://www.tutorialspoint.com/vuejs/vuejs_introduction.htm" style="color: blue;">Visit tutorialspoint</a></p>
+          <h2>Let's learn more about Installation of Vue.js</h2>
+          <p>Installing Vue.js is a straightforward process. There are different methods you can use, depending on your preferences and project setup. Here are the main installation methods:</p>
+          <ol>
+            <li>CDN (Content Delivery Network):
+                This method is the simplest and quickest way to include Vue.js in your project. You can link to Vue.js directly in your HTML file using a script tag.You can replace the version number with the desired version of Vue.js. </li>
+            <li>Using npm (Node Package Manager):
+                If you're using a Node.js-based project, using npm is a common approach to manage dependencies.
+                
+                Open your command-line interface and navigate to your project directory. Then, run the following command to install Vue.js:'npm install vue'
+                This will download the latest version of Vue.js and add it to your project's node_modules folder.</li>
+            <li>Using Yarn:
+                    If you prefer using Yarn as your package manager, you can use the following command to install Vue.js:yarn add vue</li>
+             <li>Vue CLI (Command Line Interface):
+                The Vue CLI is a powerful tool that helps you set up Vue.js projects with a standardized and optimized development environment. It automates the creation of project structure, build configuration, and more.
+                
+                To use the Vue CLI, you first need to install it globally on your machine. Open your command-line interface and run:'npm install -g @vue/cli'</li>   
+            <li>Vue CLI GUI:
+                The Vue CLI also offers a graphical user interface (GUI) for creating and managing Vue.js projects. To use the GUI, you need to install it globally as well:'npm install -g @vue/cli-gui'</li>
+            </ol>
+            <h2>Here is tutorial for installation process</h2>
+            <iframe src="https://cli.vuejs.org/guide/installation.html" name="iframe_a" height="300px" width="100%" title="Iframe Example"></iframe>
+           <br><br>
+            <h2>Vue Instance</h2>
+            <p>In Vue.js, the core building block is the Vue instance. A Vue instance is an object that serves as the entry point for your Vue application and connects your HTML markup to the underlying data and behavior. Here's how you can create a Vue instance:</p>
+            <p><h4>Include Vue.js:</h4> First, make sure you have Vue.js included in your HTML file. You can do this by including the  script tag before your Vue code</p>
+            <p><h4>Create a Vue Instance:</h4> To create a Vue instance, you call the Vue constructor and pass in an options object. The options object contains various properties that define the behavior and data of your Vue instance.When the Vue instance is created, it will automatically replace the content of the element specified by the el property with the template defined within that element, and it will also bind the data properties to the template.</p>
+            <p><h4>Template Syntax: </h4>The double curly braces {{ }} in the template indicate data binding. They are used to render the value of a data property into the template. In the example, {{ message }} will be replaced with the value of the message property in the Vue instance's data.</p>
+            <p>Below is the youtube video for more reference</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/DyndGu0fPSE?si=xZ2K_x_eNQtXakwR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+           <br><br>
+           <h2>Data Binding</h2>
+           <p>Data binding is a fundamental concept in web development that refers to the synchronization of data between the model (the application's data) and the view (the user interface). In the context of Vue.js, data binding is a key feature that allows you to establish a connection between your data and your application's template, enabling automatic updates to the UI whenever the data changes.</p>
+           <p>There are three main types of data binding in Vue.js:</p>
+           <ol>
+            <li>Interpolation: Interpolation is the simplest form of data binding. It involves embedding expressions inside double curly braces ({{ }}) in your template. The expression inside the curly braces will be evaluated and its result will be displayed in the template.</li>
+            <li>Binding Attributes: Vue allows you to bind HTML attributes to data properties using directives. Directives are special attributes with the v- prefix. One common directive is v-bind, abbreviated as :, which binds an attribute to a data property. </li>
+            <li>Two-Way Binding: Vue also supports two-way data binding using the v-model directive. This is primarily used with form elements.When you use v-model, changes to the form element's value will update the associated data property, and changes to the data property will update the form element's value.</li>
+
+           </ol>
+           <p>Vue's reactivity system handles the behind-the-scenes magic of data binding. When you modify a data property, Vue automatically detects the change and updates the corresponding part of the DOM. This allows you to build dynamic and responsive user interfaces without having to manually manage DOM updates.</p>
+          <p><center>Two-way Binding</center></p>
+           <img class="box-img" src="	https://blogs.sap.com/wp-content/uploads/2017/06/clipboard1-28.png">
+           <br><br>
+           <h2>Directives in Vue.js</h2>
+           <p>Directives in Vue.js are special attributes that are prefixed with "v-" and are used to add declarative behavior to your HTML elements. They provide a way to apply dynamic functionality to the DOM elements, allowing you to manipulate the structure and behavior of your application's user interface.</p>
+           <ul>
+            <li>v-bind (:): This directive is used for one-way data binding, allowing you to bind an element's attribute to a value from your Vue instance's data.</li>
+            <p>Example of v-bind</p>
+            <div class="box3 box">
+                <div class="box-content">
+              <div class="box-image3" style="background-image: url('https://github.com/AkankshaW21/Vue.js-Blogs/blob/main/e3.html.jpg?raw=true ');"></div>
+            </div></div>
+            
+            <li>v-model: This directive creates a two-way binding on form inputs and other form elements. It syncs the input value with a data property in your Vue instance. </li>
+            <li>v-for: This directive is used to iterate over an array in your Vue instance and render elements for each item. It's commonly used for rendering lists of data</li>
+            <li>v-if, v-else-if, v-else: These directives are used for conditional rendering. They control whether an element should be rendered or not based on the truthiness of an expression.</li>
+            <li>v-show: Similar to v-if, this directive toggles the visibility of an element based on an expression. However, instead of removing the element from the DOM, it uses CSS to control the display property.</li>
+
+            
+           </ul>
+           <br><br>
+           <h2>Vue Lifecycle Hooks</h2>
+           <p>In Vue.js, lifecycle hooks are special methods that allow you to execute code at specific stages during the lifecycle of a Vue instance or a component. These hooks provide you with the ability to perform actions when an instance or component is created, updated, or destroyed. Understanding these hooks is crucial for implementing various behaviors and interactions in your Vue applications.</p>
+           <p>Vue.js provides a set of lifecycle hooks that can be categorized into three main phases: creation, updating, and destruction. Here's an overview of the most commonly used lifecycle hooks:</p>
+           <p>Creation Hooks:<br>
+
+            beforeCreate: This hook is called before the Vue instance is created. At this point, the data and events have not been initialized yet.
+            
+            created: This hook is called after the Vue instance is created. It's a good place to perform initialization tasks, such as making API requests or setting up event listeners.</p>
+            <p>Mounting Hooks:<br>
+
+                beforeMount: This hook is called before the component is inserted into the DOM. It's the last opportunity to modify the component's template before it's rendered.
+                
+                mounted: This hook is called after the component is inserted into the DOM. It's often used to access the DOM elements and perform additional setup that requires the component to be in the DOM.</p>
+               <img class="box-img" src="https://cdn.educba.com/academy/wp-content/uploads/2020/09/Vue.js-Lifecycle.jpg">
+                <p>Updating Hooks:<br>
+
+                    beforeUpdate: This hook is called before the component's data changes are reflected in the DOM. It's useful for performing tasks before an update, such as fetching new data.
+                    
+                    updated: This hook is called after the component's data changes are reflected in the DOM. It's a good place to interact with the updated DOM or perform post-update operations.</p>
+                    <p>Destruction Hooks:<br>
+
+                        beforeDestroy: This hook is called before a Vue instance or component is destroyed. It's an opportunity to perform cleanup tasks, such as removing event listeners or canceling timers.
+                        
+                        destroyed: This hook is called after a Vue instance or component is destroyed. At this point, all directives are unbound and all event listeners are removed.</p>
+                        <p>Here's an example of how you might use lifecycle hooks in a Vue component:</p>
+                        <div class="box1 box">
+                            <div class="box-content">
+                          <div class="box-image1" style="background-image: url('https://github.com/AkankshaW21/Vue.js-Blogs/blob/main/e5.html.jpg?raw=true ');"></div>
+                        </div></div>
+           
+           
+           <hr>
+            <p>Are you ready to start building dynamic web applications with Vue.js? Share your thoughts and questions in the comments below! If you found this guide helpful, consider sharing it with your friends and fellow developers on social media.
+        </p>
+
+        <div id="app">
+            <!-- Your post content here -->
+    
+
+<div class="author-bio">
+    <img class="author-avatar" src="https://github.com/AkankshaW21/Vue.js-Blogs/blob/main/mansi.html.jpg?raw=true" alt="Author Avatar">
+    <div class="author-name">Mansi Waghmode<br>
+        Student<br>
+        SY-IT-C <br>
+        VIT Pune<br>
+        I am Mansi!I am second year student at VIT Pune as branch Information Technology.<br>
+         I hvae Knowledge of C programming,python,Data structure,HTML,CSS,Java Script,Vue.js
+       
+
+    </div>
+    <div class="author-description"></div>
+</div>
+</div>
+
+<script>
+// Your Vue.js code here
+</script>
+
+<footer> 
+    <div class="foot-panel">
+       
+    </div>
+    <div class="foot-panel2">
+        <ul>
+            <a>Get to know Us</a>
+             <a>Vue Directives</a>
+            <a>Blog</a>
+            <a>Best Practices</a>
+            <a>Vue.js Plugins</a>
+            <a>Applicaions</a>
+            <a>Web Accessibility</a>
+        </ul>
+        <ul>
+
+             <a>Libraries</a>
+            <a>Deployment Straregies</a>
+            <a>Single sign -on</a>
+            <a>Webpack</a>
+            <a>Nuxt.js</a>
+            <a>Storybook</a>
+            <a>Handling And Logging</a>
+        </ul>
+        <ul>
+
+            <a>Data Visuallizaton</a>
+            <a>design Patterns</a>
+            <a>GraphQL Clients</a>
+            <a>payment Gateways</a>
+            <a>Iot Applications</a>
+            <a>Authentication Flows</a>
+            <a>Web security</a>
+        </ul>
+        <ul>
+            <a>Web Workers</a>
+            
+            <a>CI/CD</a>
+            <a>machine learning Integration</a>
+            <a>AR</a>
+            <a>VR</a>
+            <a>IOT Dashboard</a>
+            <a>Blockchain Integration</a>
+
+        </ul>
+    </div>
+    
+   
+    </footer>
+<div class="separate-container">
+<h3>Follow Us on Social Media</h3>
+
+<!-- Social media icons within separate container -->
+<div class="social-icons-container">
+<a class="social-icon-link facebook" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a class="social-icon-link twitter" href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+<a class="social-icon-link instagram" href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+<a class="social-icon-link linkedin" href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+<a class="social-icon-link youtube" href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+</div>
+<!-- End of social media icons within a separate container -->
+
+<!-- Rest of your content goes here -->
+
+<p>Stay connected with us on social media for updates and more!</p>
+
+<!-- Phone number and address -->
+<div class="contact-info">
+<p><i class="fas fa-phone"></i> Phone: +1 (123) 456-7890</p>
+<p><i class="fas fa-map-marker-alt"></i> Address: VIT Pune, IT Department, SY-C-Group No.9, Pune, India</p>
+</div>
+<!-- End of phone number and address -->
+</div>
+
+</div>
+</body>
+</html>
